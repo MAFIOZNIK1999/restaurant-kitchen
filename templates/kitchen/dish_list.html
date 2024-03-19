@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Dish list
+  </h1>
+  {% if dish_list %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      {% for dish in dish_list %}
+        <tr>
+          <td><a href="{% url 'kitchen:dish_detail' pk=dish.id %}">{{ dish.id }}</a></td>
+          <td>{{ dish.name }}</td>
+          <td>{{ dish.price }}</td>
+          <td>
+            {% if dish.description %}
+              {{ dish.description }}
+            {% else %}
+              No description
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+
+    </table>
+  {% else %}
+    <p>There are no dishes in the service.</p>
+  {% endif %}
+{% endblock %}
