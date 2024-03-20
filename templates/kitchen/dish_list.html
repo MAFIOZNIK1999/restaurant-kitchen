@@ -3,6 +3,9 @@
 {% block content %}
   <h1>
     Dish list
+  <a href="{% url 'kitchen:dish-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
   </h1>
   {% if dish_list %}
     <table class="table">
@@ -14,7 +17,7 @@
       </tr>
       {% for dish in dish_list %}
         <tr>
-          <td><a href="{% url 'kitchen:dish_detail' pk=dish.id %}">{{ dish.id }}</a></td>
+          <td><a href="{% url 'kitchen:dish-detail' pk=dish.id %}">{{ dish.id }}</a></td>
           <td>{{ dish.name }}</td>
           <td>{{ dish.price }}</td>
           <td>

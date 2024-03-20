@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete cook?</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Yes" class="btn btn-danger">
+  </form>
+  <form action="{% url 'kitchen:cook-detail' pk=cook.id %}">
+    <input type="submit" value="Cancel" class="btn btn-secondary">
+  </form>
+{% endblock %}

@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "crispy_forms",
-    "bootstrap4",
     "kitchen",
 ]
 
@@ -70,8 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "restaurant_kitchen.wsgi.application"
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -100,6 +97,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "kitchen.Cook"
+
+LOGIN_REDIRECT_URL = "/"
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -111,9 +112,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = "kitchen.Cook"
-
-LOGIN_REDIRECT_URL = "/"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -121,6 +120,8 @@ LOGIN_REDIRECT_URL = "/"
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = (BASE_DIR / "static",)
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

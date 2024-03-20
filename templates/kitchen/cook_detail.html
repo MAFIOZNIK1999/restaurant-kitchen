@@ -3,6 +3,14 @@
 {% block content %}
   <h1>
     Username: {{ cook.username }}
+
+    <a href="{% url 'kitchen:cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">
+      Delete cook
+    </a>
+
+    <a href="{% url 'kitchen:cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">
+      Update years of experience
+    </a>
   </h1>
 
   <p><strong>First name:</strong> {{ cook.first_name }}</p>
@@ -29,4 +37,7 @@
       <p>No dishes!</p>
     {% endfor %}
   </div>
+  <form action="{% url 'kitchen:cook-list' %}">
+    <input type="submit" value="Back" class="btn btn-secondary">
+  </form>
 {% endblock %}

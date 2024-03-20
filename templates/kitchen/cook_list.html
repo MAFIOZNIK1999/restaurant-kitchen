@@ -3,6 +3,9 @@
 {% block content %}
   <h1>
     Cook List
+    <a href="{% url 'kitchen:cook-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
   </h1>
 
   {% if cook_list %}
@@ -17,9 +20,13 @@
       {% for cook in cook_list %}
         <tr>
           <td>
-            <a href="{% url 'kitchen:cook_detail' pk=cook.id %}">{{ cook.id }}</a>
+            <a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.id }}</a>
           </td>
-          <td>{{ cook.username }}</td>
+          <td>{{ cook.username }}
+            {% if user == cook %}
+              (Me)
+            {% endif %}
+          </td>
           <td>{{ cook.first_name }}</td>
           <td>{{ cook.last_name }}</td>
           <td>{{ cook.years_of_experience }}</td>
