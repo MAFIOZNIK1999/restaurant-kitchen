@@ -28,7 +28,6 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "kitchen/index.html", context=context)
 
 
-
 class DishTypeListView(LoginRequiredMixin, generic.ListView):
     model = DishType
     context_object_name = "dish_type_list"
