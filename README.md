@@ -27,7 +27,7 @@ git clone repository_url
 2. Go to the project directory.
 
 ```angular2html
-cd restaurant_kitchen
+cd restaurant-kitchen
 ```
 
 3. Create and activate a virtual environment:
