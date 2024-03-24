@@ -12,7 +12,9 @@ where the manager can add dishes, ingredients and cooks.
 
 ### Check it out!
 
-[Kitchen project deployed to Render]()
+[Kitchen project deployed to Render](https://restaurant-kitchen-ldjd.onrender.com)
+- login: admin
+- password: 123
 
 ### How to install the project
 
