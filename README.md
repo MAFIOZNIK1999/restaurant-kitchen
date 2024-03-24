@@ -71,8 +71,8 @@ python manage.py runserver
 
 ### Technologies:
 
-- Python
-- SQLite database
+- Python 3.12.1
+- SQLite, PostgreSQL databases
 - Django 4.1.0 (MVT, Session, Forms, Tests)
 
 ### To run this project locally:
