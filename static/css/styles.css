@@ -6,3 +6,20 @@ body {
     float: right;
     margin: 0 2px 0 2px;
 }
+
+.search-form {
+    margin-right: 5px;
+}
+
+.logout-item {
+    background-color: #343a40;
+    border-color: #454d55;
+}
+
+.logout-item a{
+    color: #fff;
+}
+
+.list-group-item a{
+    font-weight: bold;
+}
