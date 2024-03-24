@@ -62,6 +62,13 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
+6. Run the Django development server.
+
+```
+python manage.py runserver
+
+```
+
 ### Technologies:
 
 - Python
