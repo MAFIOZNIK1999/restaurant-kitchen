@@ -8,7 +8,7 @@ crispy==0.7.4
 crispy-bootstrap4==2023.1
 cycler==0.12.1
 dj-database-url==2.1.0
-Django==4.2.4
+Django==4.2.9
 django-bootstrap4==24.1
 django-crispy-forms==2.1
 django-theme-material-kit==1.0.19
