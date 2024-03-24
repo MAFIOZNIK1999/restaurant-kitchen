@@ -23,7 +23,7 @@ lxml==5.1.0
 matplotlib==3.7.5
 mccabe==0.7.0
 mypy-extensions==1.0.0
-numpy==1.26.4
+numpy==1.24.4
 packaging==24.0
 pathspec==0.12.1
 pillow==10.2.0
