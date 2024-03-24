@@ -62,7 +62,13 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-6. Run the Django development server.
+6. Create superuser
+
+```
+python manage.py createsuperuser
+```
+
+8. Run the Django development server.
 
 ```
 python manage.py runserver
@@ -75,14 +81,6 @@ python manage.py runserver
 - SQLite, PostgreSQL databases
 - Django 4.1.0 (MVT, Session, Forms, Tests)
 
-### To run this project locally:
-
-- Fork this project to your repository
-- Clone project locally and open it in PyCharm
-- Create superuser
-
-
-- Just run the application on your computer and test the project on localhost.
 
 Project diagram:
 ![img.png](img.png)
